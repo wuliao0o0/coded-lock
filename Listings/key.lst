@@ -1,0 +1,61 @@
+C51 COMPILER V9.54   KEY                                                                   09/06/2021 21:02:08 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE KEY
+OBJECT MODULE PLACED IN .\Objects\key.obj
+COMPILER INVOKED BY: D:\keil\C51\BIN\C51.EXE key.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\key.lst)
+                    - OBJECT(.\Objects\key.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "delay.h"
+   3          #include "LCD1602.h"
+   4          unsigned char i=0;
+   5          char string[12];
+   6          char key()
+   7          {
+   8   1              char Keynumber=10;
+   9   1              P1=0xff;
+  10   1              P1_7=0;
+  11   1              if(P1_3==0){delay(20);if(P1_3==0){Keynumber=1;}}
+  12   1              if(P1_2==0){delay(20);if(P1_2==0){Keynumber=2;}}
+  13   1              if(P1_1==0){delay(20);if(P1_1==0){Keynumber=3;}}
+  14   1              if(P1_0==0){delay(20);if(P1_0==0){Keynumber=4;}}
+  15   1                                
+  16   1              P1=0xff;          
+  17   1              P1_6=0;           
+  18   1              if(P1_3==0){delay(20);if(P1_3==0){Keynumber=5;}}
+  19   1              if(P1_2==0){delay(20);if(P1_2==0){Keynumber=6;}}
+  20   1              if(P1_1==0){delay(20);if(P1_1==0){Keynumber=7;}}
+  21   1              if(P1_0==0){delay(20);if(P1_0==0){Keynumber=8;}}
+  22   1                               
+  23   1              P1=0xff;         
+  24   1              P1_5=0;          
+  25   1              if(P1_3==0){delay(20);if(P1_3==0){Keynumber=9;}}
+  26   1              if(P1_2==0){delay(20);if(P1_2==0){Keynumber=0;}}
+  27   1              if(P1_1==0){delay(20);if(P1_1==0){Keynumber=11;}}
+  28   1              if(P1_0==0){delay(20);if(P1_0==0){Keynumber=12;}}
+  29   1                               
+  30   1              P1=0xff;         
+  31   1              P1_4=0;          
+  32   1              if(P1_3==0){delay(20);if(P1_3==0){Keynumber=13;}}
+  33   1              if(P1_2==0){delay(20);if(P1_2==0){Keynumber=14;}}
+  34   1              if(P1_1==0){delay(20);if(P1_1==0){Keynumber=15;i=0;}}//清屏加返回键值
+  35   1              if(P1_0==0){delay(20);if(P1_0==0){Keynumber=16;}}
+  36   1              return Keynumber;
+  37   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    285    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     13       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
